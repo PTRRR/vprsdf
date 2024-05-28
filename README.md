@@ -38,10 +38,10 @@ import { loadImage } from "./utils";
   for (let i = 0; i < sdf.length; i++) {
     const distance = sdf[i];
 
-    imageData.data[i] = distance;
-    imageData.data[i + 1] = distance;
-    imageData.data[i + 2] = distance;
-    imageData.data[i + 3] = 255;
+    imageData.data[i * 4] = distance;
+    imageData.data[i * 4 + 1] = distance;
+    imageData.data[i * 4 + 2] = distance;
+    imageData.data[i * 4 + 3] = 255;
   }
 
   ctx.putImageData(imageData, 0, 0);

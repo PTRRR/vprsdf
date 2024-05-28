@@ -47,7 +47,7 @@ export const generateSdf = (
   for (let i = 0; i < distances.length; i++) {
     const distance = remap(distances[i], minValue, maxValue, 0, 255);
     const clampedDistance = clamp(distance, 0, 255);
-    newImageData.push(clampedDistance, clampedDistance, clampedDistance, 255);
+    newImageData.push(clampedDistance);
   }
 
   return new Float32Array(newImageData);

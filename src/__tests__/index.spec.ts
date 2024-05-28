@@ -13,5 +13,5 @@ test("Main", async () => {
     width: image.getWidth(),
   });
 
-  expect(sdf.length).toBe(imageData.length);
+  expect(sdf.length).toBe(imageData.length / 4);
 });
