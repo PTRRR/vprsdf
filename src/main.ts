@@ -1,4 +1,4 @@
-import { loadImage } from "./utils";
+import { clamp, loadImage, remap } from "./utils";
 import { sdf } from "./lib";
 
 (async () => {
@@ -36,32 +36,25 @@ import { sdf } from "./lib";
     imageData.data[i + 3] = 255;
   }
 
-  console.time("sdf");
   const t = sdf(inFilled, canvas.width);
-  console.timeEnd("sdf");
 
   let maxValue = 0;
   let minValue = Infinity;
 
+  for (const distance of t) {
+    if (distance > maxValue) maxValue = distance;
+    if (distance < minValue) minValue = distance;
+  }
+
   for (let i = 0; i < imageData.data.length; i += 4) {
-    const distance = ((t[i / 4] + 400) / 800) * 255;
-
-    if (distance > maxValue) {
-      maxValue = distance;
-    }
-
-    if (distance < minValue) {
-      minValue = distance;
-    }
+    const distance = remap(t[i / 4], minValue, maxValue, 0, 255);
 
     for (let j = 0; j < 3; j++) {
-      imageData.data[i + j] = distance;
+      imageData.data[i + j] = clamp(distance, 0, 255);
     }
 
     imageData.data[i + 3] = 255;
   }
 
   ctx.putImageData(imageData, 0, 0);
-
-  console.log(maxValue, minValue);
 })();
