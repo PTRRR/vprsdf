@@ -4,7 +4,7 @@ import { sdf } from "../lib";
 
 test("Lib", async () => {
   const image = await Jimp.read(
-    path.join(__dirname, "../assets/atom-small.png")
+    path.join(__dirname, "../../assets/atom-small.png")
   );
 
   const imageData = new Uint8Array(image.bitmap.data.buffer);
