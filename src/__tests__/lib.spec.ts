@@ -1,6 +1,6 @@
 import Jimp from "jimp";
 import path from "path";
-import { sdf } from "./lib";
+import { sdf } from "../lib";
 
 test("Lib", async () => {
   const image = await Jimp.read(

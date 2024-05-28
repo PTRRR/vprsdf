@@ -1,6 +1,6 @@
 import Jimp from "jimp";
 import path from "path";
-import { generateSdf } from "./main";
+import { generateSdf } from "../index";
 
 test("Main", async () => {
   const image = await Jimp.read(

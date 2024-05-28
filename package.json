@@ -1,8 +1,16 @@
 {
   "name": "vprsdf",
+  "description": "Tools for creating signed distance fields from image data",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.0.1",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [],
+  "author": "Pietro Alberti",
+  "license": "ISC",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json"
