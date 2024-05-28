@@ -42,17 +42,13 @@ export const generateSdf = (
     if (distance < minValue) minValue = distance;
   }
 
-  const newImageData = new Float32Array(distances.length * 4);
+  const newImageData: number[] = [];
 
-  for (let i = 0; i < distances.length; i += 4) {
-    const distance = remap(distances[i / 4], minValue, maxValue, 0, 255);
+  for (let i = 0; i < distances.length; i++) {
+    const distance = remap(distances[i], minValue, maxValue, 0, 255);
     const clampedDistance = clamp(distance, 0, 255);
-
-    newImageData[i] = clampedDistance;
-    newImageData[i + 1] = clampedDistance;
-    newImageData[i + 2] = clampedDistance;
-    newImageData[i + 3] = 255;
+    newImageData.push(clampedDistance, clampedDistance, clampedDistance, 255);
   }
 
-  return newImageData;
+  return new Float32Array(newImageData);
 };
