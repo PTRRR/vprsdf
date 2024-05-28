@@ -1,9 +1,3 @@
-function euclidean(dx: number, dy: number): number {
-  return Math.sqrt(dx * dx + dy * dy);
-}
-
-type Metric = (dx: number, dy: number) => number;
-
 export function sdf(inFilled: boolean[], width: number): number[] {
   const height = Math.floor(inFilled.length / width);
   const halfVector: [number, number][] = new Array(inFilled.length).fill([
@@ -24,6 +18,12 @@ export function sdf(inFilled: boolean[], width: number): number[] {
   }
   return out;
 }
+
+function euclidean(dx: number, dy: number): number {
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+type Metric = (dx: number, dy: number) => number;
 
 function sdfPartial(
   inFilled: boolean[],
