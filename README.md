@@ -39,7 +39,7 @@ import { loadImage } from "./utils";
   const imageData = ctx.getImageData(0, 0, 400, 400);
 
   // Compute signed distance field
-  const sdf = generateSdf(new Uint8Array(imageData.data), {
+  const sdf = generateSdf(imageData.data, {
     width: 400,
   });
 
