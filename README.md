@@ -2,6 +2,11 @@
 
 `vprsdf` is a fast signed distance field generator for Node and the browser. It doesn't use any external libraries, which makes it an excellent candidate for use in a separate thread or worker for asynchronous execution.
 
+<img src="https://sdf.vpr-group.ch/KERO-IG4.webp" alt="font" width="250"/>
+<img src="https://sdf.vpr-group.ch/sdf-KERO-IG4.png" alt="sdf" width="250"/>
+
+[Font](https://eliottgrunewald.xyz/typefaces/kerozene) by [Eliott Grunewald](https://eliottgrunewald.xyz/)
+
 This package is a port of the beautifully explained [algorithm](https://tkmikyon.medium.com/computing-the-signed-distance-field-a1fa9ba2fc7d) from [@tkmikyon](https://twitter.com/tkmikyon).
 
 [Demo](https://sdf.vpr-group.ch/)
