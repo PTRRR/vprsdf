@@ -3,7 +3,7 @@
   "description": "Tools for creating signed distance fields from image data",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "lib/**/*"
   ],
@@ -12,7 +12,10 @@
     "glsl",
     "shader",
     "font rendering",
-    "signed distance field"
+    "signed distance field",
+    "computer graphics",
+    "text",
+    "vector"
   ],
   "author": "Pietro Alberti",
   "license": "ISC",
