@@ -5,7 +5,7 @@ export type GenerateSdfParams = {
   width: number;
 };
 
-export const getFilled = (imageData: Uint8Array) => {
+export const getFilled = (imageData: ArrayLike<number>) => {
   const filled: boolean[] = [];
 
   for (let i = 0; i < imageData.length; i += 4) {
