@@ -1,6 +1,6 @@
 # VPR - SDF
 
-`vprsdf` is a fast signed distance field (SDF) generator designed for use in both Node.js and browser environments. It processes image pixel data as input and produces an array of corresponding distance values, which are normalized to a range of 0 to 255. This package operates without any external libraries, making it suitable for implementation in separate threads or web workers for asynchronous execution.
+`vprsdf` is a fast and efficient signed distance field (SDF) generator designed for use in both Node.js and browser environments. It processes image pixel data as input and produces an array of corresponding distance values, which are normalized to a range of 0 to 255. This package operates without any external libraries, making it suitable for implementation in separate threads or web workers for asynchronous execution.
 
 <span>
 <img src="https://sdf.vpr-group.ch/KERO-IG4.webp" alt="font" width="250"/>
