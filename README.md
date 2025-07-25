@@ -9,7 +9,7 @@
 <img src="https://sdf.vpr-group.ch/sdf-KERO-IG4.png" alt="sdf" width="250"/>
 </span>
 
-[Font](https://eliottgrunewald.xyz/typefaces/kerozene) by [Eliott Grunewald](https://eliottgrunewald.xyz/)
+[Font](https://ott-foundry.com/typefaces/kerozene) by [Eliott Grunewald](https://ott-foundry.com/)
 
 This package is a port of the beautifully explained [algorithm](https://tkmikyon.medium.com/computing-the-signed-distance-field-a1fa9ba2fc7d) from [@tkmikyon](https://twitter.com/tkmikyon).
 
